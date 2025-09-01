@@ -20,7 +20,7 @@ import socket
 
 def keep_alive():
     s = socket.socket()
-    s.bind(('0.0.0.0', 10000))  # Dummy port
+    s.bind(('0.0.0.0', 54321))  # Use a high, uncommon port
     s.listen(1)
     while True:
         time.sleep(1000)
@@ -34,3 +34,4 @@ if __name__ == "__main__":
     idle()
     app.stop()
     print("🛑 Bot stopped.")
+
