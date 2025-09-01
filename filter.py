@@ -2,8 +2,8 @@ from pyrogram import filters
 from pyrogram.types import Message
 from config import FILE_CHANNELS
 from bot import app
-from utils.logger import log_event
-from utils.caption import format_caption
+from logger import log_event
+from caption import format_caption
 
 @app.on_message(filters.text & ~filters.command(["start"]))
 async def filter_handler(client, message: Message):
