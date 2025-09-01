@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 from bot import app
-from utils.logger import log_event
+from logger import log_event
 
 @app.on_message(filters.command("start"))
 async def start_handler(client, message: Message):
